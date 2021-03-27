@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="DotNetCommunity.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+    
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 777px;
+        }
+        .auto-style2 {
+             height: 41px;
+            background-image:url('linear-gradient(135deg,#ABDCEF 0%,#0396FF 100%)');
+            width: 1181px;
+            
+        }
+        .auto-style3 {
+           height: 582px;
+           width:89%
+        }
+        .auto-style4 {
+            height: 582px;
+            width: 25%;
+        }
+        .auto-style5 {
+            height: 40px;
+        }
+        .head{
+            text-align:center;
+            align-content:center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <table class="auto-style1">
+                <tr>
+                    
+                         <td class="auto-style2"  style="background-color: #FFFFFF; background-repeat: no-repeat; font-family: Mangal; font-style: italic; color: #800000; text-align: center; vertical-align: middle; border-bottom-style: solid;">
+                        
+                        <asp:Image ID="logo" runat="server"  ImageUrl="./logo1.png" style="float:left" Height="100px"/>
+
+           
+                        
+                        <asp:Label ID="pagehead" runat="server" style="background-image:linear-gradient(45deg,#ff6a00,#ffd800)"  Text="DOTNET COMMUNITY" Font-Bold="True" Font-Italic="True" Font-Size="50px" ForeColor="#FF0066"></asp:Label>
+
+           
+                        
+                    </td>
+                    <td style="border-bottom-style: solid">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="./meeting.jpeg" style="float:right;" Height="100px" Width="100px"/>
+       
+                    </td>
+                 
+                       
+       
+                    
+                    
+                </tr>
+                <tr>
+                    <td class="auto-style5" colspan="3">
+                       
+                    
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#FF3399" Height="30px" Orientation="Horizontal" Width="100%">
+                            <DynamicMenuItemStyle BackColor="#FF6699" ForeColor="White" VerticalPadding="10px" />
+                            <DynamicSelectedStyle BackColor="Black" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem Text="HOME" Value="HOME"></asp:MenuItem>
+                                <asp:MenuItem Text="FORUMS" Value="FORUMS">
+                                    <asp:MenuItem Text="POSTAQUERY" Value="POSTAQUERY" NavigateUrl="~/postaquery.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="VIEWALLQUESTIONS" Value="VIEWALLQUESTIONS"></asp:MenuItem>
+                                    <asp:MenuItem Text="VIEWANSWEREDQUESTIOS" Value="VIEANSWEREDQUESTIONS"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="ARTICLES" Value="ARTICLES">
+                                    <asp:MenuItem Text="POSTARTICLE" Value="POSTARTICLE"></asp:MenuItem>
+                                    <asp:MenuItem Text="SEARCHARTICLE" Value="SEARCHARTICLE"></asp:MenuItem>
+                                    <asp:MenuItem Text="VIEWARTICLES" Value="VIEWARTICLES"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="PROJECTS" Value="PROJECTS">
+                                    <asp:MenuItem Text="UPLOADPROJECT" Value="UPLOADPROJECT"></asp:MenuItem>
+                                    <asp:MenuItem Text="SEARCHPROJECT" Value="SEARCHPROJECT"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="SIGNOUT" Value="SIGNOUT"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="White" ForeColor="Black" />
+                            <StaticMenuItemStyle ForeColor="White" ItemSpacing="10px" />
+                            <StaticMenuStyle HorizontalPadding="10px" VerticalPadding="10px" />
+                            <StaticSelectedStyle BackColor="Black" ForeColor="White" />
+                        </asp:Menu>
+                       
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:100%" colspan="3">
+                        <table style="width:100%">
+                            <tr>
+                                <td class="auto-style4">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+                    <td class="auto-style3" colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+                    </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>

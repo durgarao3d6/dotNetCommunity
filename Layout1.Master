@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout1.master.cs" Inherits="DotNetCommunity.Layout1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+       
+        .button{
+            width:100px;
+            height:25px;
+            border-radius:25px;
+            background-image:linear-gradient(135deg,#ABDCEF 0%,#0396FF 100%);
+            box-shadow:0 20PX 30PX -6PX rgba(238,103,97,0.5);
+            border:none;
+           
+           
+            
+        }
+        .auto-style1 {
+            width: 100%;
+            height: 542px;
+        }
+        .auto-style2 {
+            height: 41px;
+            background-image:url('linear-gradient(135deg,#ABDCEF 0%,#0396FF 100%)');
+            width: 1711px;
+        }
+                       
+        .auto-style3 {
+            height: 50px;
+        }
+                       
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr >
+                    <td class="auto-style2"  style="background-color: #FFFFFF; background-repeat: no-repeat; font-family: Mangal; font-style: italic; color: #800000; text-align: center; vertical-align: middle; border-bottom-style: solid;">
+                        
+                        <asp:Image ID="logo" runat="server"  ImageUrl="./logo1.png" style="float:left" Height="100px"/>
+
+           
+                        
+                        <asp:Label ID="pagehead" runat="server" style="background-image:linear-gradient(45deg,#ff6a00,#ffd800)"  Text="DOTNET COMMUNITY" Font-Bold="True" Font-Italic="True" Font-Size="50px" ForeColor="#FF0066"></asp:Label>
+
+           
+                        
+                    </td>
+                    <td style="border-bottom-style: solid">
+                        <asp:Image ID="Image2" runat="server" ImageUrl="./meeting.jpeg" style="float:right;" Height="100px" Width="100px"/>
+       
+                    </td>
+                </tr>
+                <tr>
+                     <td colspan="3" class="auto-style3" >
+                         <asp:Menu ID="Menu1" runat="server" BackColor="Maroon"  Orientation="Horizontal" Width="100%" Height="50px">
+                             <Items>
+                                 <asp:MenuItem>
+                                    
+                                 </asp:MenuItem>
+                                 <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/home.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="ABOUTUS" Value="ABOUTUS" NavigateUrl="~/Aboutus.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="CONTACT US" Value="CONTACT US" NavigateUrl="~/Contactus.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="LOGIN" Value="LOGIN" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                                 <asp:MenuItem Text="REGISTRATION" Value="REGISTRATION" NavigateUrl="~/Registration.aspx"></asp:MenuItem>
+                             </Items>
+                             <StaticHoverStyle BackColor="White" BorderColor="Black" ForeColor="Black" />
+                             <StaticMenuItemStyle ForeColor="#FF9900" HorizontalPadding="10px" Height="50px" />
+                             <StaticMenuStyle Height="50px" HorizontalPadding="10px" />
+                             <StaticSelectedStyle BackColor="Black" ForeColor="White" />
+                         </asp:Menu> 
+                         
+                     </td>    
+                </tr>
+                          
+                <tr>
+                          <td colspan="2" class="container">
+
+                        <div style="text-align:center;text-align :left;margin-left:25%;margin-right:25%;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1"  runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                            </div>
+
+                    </td>
+                </tr>
+                </table>
+           
+        </div>
+    </form>
+</body>
+</html>
