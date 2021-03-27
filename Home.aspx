@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        This Platform is intended for the dotnet developers and aspiring learners to share their knowledge.
+        This Platform is intended for the dotnet developers and aspiring learners to share their knowledge. Let's Grow together
     </p>
     <div style="float:right">
     <asp:Label ID="lgid" runat="server"  ></asp:Label>
